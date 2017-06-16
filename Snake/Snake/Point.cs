@@ -23,7 +23,13 @@ namespace Snake
         // Конструктор.void не нужен ибо никогда не возвр.значение
         public Point()
         {
+        }
 
+        public Point(int _x, int _y, char _sym)
+        {
+            x = _x;
+            y = _y;
+            sym = _sym; //это как this x = x;
         }
 
         public void Draw()
