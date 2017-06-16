@@ -11,12 +11,21 @@ namespace Snake
         public int x;
         public int y;
         public char sym;
-
+        
+       #region OldDraw
         static void Draw(int x, int y, char sym)
         {
             Console.SetCursorPosition(x, y);
             Console.Write(sym);   
         }
+        #endregion
+
+        // Конструктор.void не нужен ибо никогда не возвр.значение
+        public Point()
+        {
+
+        }
+
         public void Draw()
         {
             Console.SetCursorPosition(x, y);

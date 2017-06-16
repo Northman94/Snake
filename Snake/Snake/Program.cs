@@ -11,10 +11,13 @@ namespace Snake
         static void Main(string[] args)
         {
             Point p1 = new Point();
-            p1.x = 1;
-            p1.y = 3;
-            p1.sym = '*';
-            p1.Draw();
+            #region Before Constructor
+            /* p1.x = 1;
+             p1.y = 3;
+             p1.sym = '*';
+             p1.Draw();
+             */
+            #endregion
 
             #region Previous
             /* int x1 = 1;
@@ -31,7 +34,6 @@ namespace Snake
              Draw(x2, y2, sym2);
              */
             #endregion
-
             Point p2 = new Point();
             p2.x = 4;
             p2.y = 5;
