@@ -18,7 +18,7 @@ namespace Snake
             p2.Draw();
 
             // Создаем линию
-            HorizontalLine line = new HorizontalLine();
+            HorizontalLine line = new HorizontalLine(5, 10, 8 , '+');
             line.Draw();
 
             Console.ReadLine();
