@@ -24,10 +24,51 @@ namespace Snake
             sym = _sym; //это как this x = x;
         }
 
+
+        //---------------------------------------
+        //Конструктор для Snake
+        public Point (Point p)
+        {
+            x = p.x;
+            y = p.y;
+            sym = p.sym;
+        }
+        
+        // Метод движения Змейки
+        public void Move(int offset, Direction direction)
+        {
+            if(direction == Direction.RIGHT)
+            {
+                x = x + offset;
+            }
+            else if (direction == Direction.LEFT)
+            {
+                x = x - offset;
+            }
+            else if (direction == Direction.UP)
+            {
+                y = y + offset;
+            }
+            else if (direction == Direction.DOWN)
+            {
+                y = y - offset;
+            }
+        }
+        //-----------------------------------------
+
+
         public void Draw()
         {
             Console.SetCursorPosition(x, y);
             Console.Write(sym);
+        }
+
+
+        // Метод чтоб удобнее было в отладчике смотреть
+        // на значение переменной Point
+        public override string ToString()
+        {
+            return x + ", " + y + ", " + sym;
         }
     }
 }
