@@ -11,7 +11,8 @@ namespace Snake
         static void Main(string[] args)
         {
             // Установить размер окна и убрать возможность пролистывать экран
-            Console.SetBufferSize(120, 40);
+            Console.SetWindowSize(80, 25);
+            Console.SetBufferSize(80, 25);
 
             // Отрисовка рамочки
 
