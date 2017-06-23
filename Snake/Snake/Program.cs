@@ -72,7 +72,6 @@ namespace Snake
                 snake.Move();
             }
 
-
         }
     }
 }
