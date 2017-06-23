@@ -12,7 +12,5 @@ namespace Snake
         RIGHT,
         UP,
         DOWN
-
-
     }
 }

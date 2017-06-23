@@ -34,7 +34,7 @@ namespace Snake
             sym = p.sym;
         }
         
-        // Метод движения Змейки
+        // Метод направления Змейки
         public void Move(int offset, Direction direction)
         {
             if(direction == Direction.RIGHT)
