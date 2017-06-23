@@ -28,7 +28,7 @@ namespace Snake
             rightLine.Draw();
 
 
-            // Змейка 'p'-точка хвоста, '4'-длина и направление
+            // Змейка: 'p'-точка хвоста, '4'-длина и направление
 
             Point p = new Point(4, 5, '*');
             Snake snake = new Snake(p, 4, Direction.RIGHT);
