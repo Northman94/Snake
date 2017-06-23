@@ -33,40 +33,21 @@ namespace Snake
             Snake snake = new Snake(p, 4, Direction.RIGHT);
             snake.Draw();
 
-            #region Previous_movement_solution
-            //snake.Move();
 
-            //// Чтоб движение было более наглядным добавим метод задержки
-            //Thread.Sleep(300);
-            //snake.Move();
+            // Отрисовка/рандом еды
+            // Габариты экрана и символ еды
+            FoodCreator foodCreator = new FoodCreator(80, 25, '$');
+            Point food = foodCreator.CreateFood();
+            food.Draw();
 
-            //Thread.Sleep(300);
-            //snake.Move();
-            //Thread.Sleep(300);
-            //snake.Move();
-            //Thread.Sleep(300);
-            //snake.Move();
-            //Thread.Sleep(300);
-            //snake.Move();
-            #endregion
 
+            // Движение
             while (true)
             {
                 if (Console.KeyAvailable)
                 {
                     ConsoleKeyInfo key = Console.ReadKey();
                     snake.HandleKey(key.Key);                   
-                    
-                    #region old_if-else_move
-                    //if (key.Key == ConsoleKey.LeftArrow)
-                    //    snake.direction = Direction.LEFT;
-                    //else if (key.Key == ConsoleKey.RightArrow)
-                    //    snake.direction = Direction.RIGHT;
-                    //else if (key.Key == ConsoleKey.DownArrow)
-                    //    snake.direction = Direction.DOWN;
-                    //else if (key.Key == ConsoleKey.UpArrow)
-                    //    snake.direction = Direction.UP;
-                    #endregion
                 }
                 Thread.Sleep(100);
                 snake.Move();
