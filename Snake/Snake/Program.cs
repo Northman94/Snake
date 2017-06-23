@@ -28,45 +28,26 @@ namespace Snake
             rightLine.Draw();
 
 
-            // Змейка: 'p'-точка хвоста, '4'-длина и направление
-
+            // Отрисовка точек Змейки: 'p'-точка хвоста, '4'-длина и направление
             Point p = new Point(4, 5, '*');
             Snake snake = new Snake(p, 4, Direction.RIGHT);
             snake.Draw();
 
             #region Previous_movement_solution
-            snake.Move();
+            //snake.Move();
 
-            // Чтоб движение было более наглядным добавим метод задержки
-            Thread.Sleep(300);
-            snake.Move();
+            //// Чтоб движение было более наглядным добавим метод задержки
+            //Thread.Sleep(300);
+            //snake.Move();
 
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
+            //Thread.Sleep(300);
+            //snake.Move();
+            //Thread.Sleep(300);
+            //snake.Move();
+            //Thread.Sleep(300);
+            //snake.Move();
+            //Thread.Sleep(300);
+            //snake.Move();
             #endregion
 
             while (true)
@@ -74,20 +55,24 @@ namespace Snake
                 if (Console.KeyAvailable)
                 {
                     ConsoleKeyInfo key = Console.ReadKey();
-
-                    if (key.Key == ConsoleKey.LeftArrow)
-                        snake.direction = Direction.LEFT;
-                    else if (key.Key == ConsoleKey.RightArrow)
-                        snake.direction = Direction.RIGHT;
-                    else if (key.Key == ConsoleKey.DownArrow)
-                        snake.direction = Direction.DOWN;
-                    else if (key.Key == ConsoleKey.UpArrow)
-                        snake.direction = Direction.UP;
+                    snake.HandleKey(key.Key);                   
+                    
+                    #region old_if-else_move
+                    //if (key.Key == ConsoleKey.LeftArrow)
+                    //    snake.direction = Direction.LEFT;
+                    //else if (key.Key == ConsoleKey.RightArrow)
+                    //    snake.direction = Direction.RIGHT;
+                    //else if (key.Key == ConsoleKey.DownArrow)
+                    //    snake.direction = Direction.DOWN;
+                    //else if (key.Key == ConsoleKey.UpArrow)
+                    //    snake.direction = Direction.UP;
+                    #endregion
                 }
                 Thread.Sleep(100);
                 snake.Move();
-
             }
+
+
         }
     }
 }
