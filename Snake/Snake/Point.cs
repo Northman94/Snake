@@ -63,6 +63,11 @@ namespace Snake
             Console.Write(sym);
         }
 
+        public void Clear()
+        {
+            sym = ' ';
+            Draw();
+        }
 
         // Метод чтоб удобнее было в отладчике смотреть
         // на значение переменной Point

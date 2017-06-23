@@ -8,9 +8,6 @@ namespace Snake
 {
     class HorizontalLine : Figure
     {
-        #region List
-        //List<Point> pList;
-        #endregion
 
         public HorizontalLine(int xLeft, int xRight, int y, char sym)
         {
@@ -23,14 +20,5 @@ namespace Snake
             }
         }
 
-        #region Draw
-        //public void Draw()
-        //{
-        //    foreach (Point p in pList)
-        //    {
-        //        p.Draw();
-        //    }
-        //}
-        #endregion
     }
 }

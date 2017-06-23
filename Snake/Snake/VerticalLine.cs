@@ -8,9 +8,6 @@ namespace Snake
 {
     class VerticalLine : Figure
     {
-        #region List
-        List<Point> pList;
-        #endregion
 
         public VerticalLine(int yUp, int yDown, int x, char sym)
         {
@@ -22,16 +19,6 @@ namespace Snake
                 pList.Add(p);
             }
         }
-
-        #region Draw
-        public void Draw()
-        {
-            foreach (Point p in pList)
-            {
-                p.Draw();
-            }
-        }
-        #endregion
 
     }
 }
