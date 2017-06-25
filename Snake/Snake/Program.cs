@@ -62,19 +62,6 @@ namespace Snake
                 }
             }
 
-            #region old Move-loop
-            // Движение
-            while (true)
-            {
-                if (Console.KeyAvailable)
-                {
-                    ConsoleKeyInfo key = Console.ReadKey();
-                    snake.HandleKey(key.Key);                   
-                }
-                Thread.Sleep(100);
-                snake.Move();
-            }
-            #endregion
 
         }
     }
