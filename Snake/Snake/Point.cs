@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace Snake
 {
+    // В 14 уроке все кардинально ппоменяется без толкового объяснения
+
     class Point
     {
         public int x;

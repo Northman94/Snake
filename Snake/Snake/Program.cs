@@ -8,9 +8,13 @@ using System.Threading.Tasks;
 namespace Snake
 {
     class Program
+
     {
         static void Main(string[] args)
         {
+            // В 14 уроке все кардинально ппоменяется без толкового объяснения
+
+
             // Установить размер окна и убрать возможность пролистывать экран
             Console.SetWindowSize(80, 25);
             Console.SetBufferSize(80, 25);

@@ -8,6 +8,8 @@ namespace Snake
 {
     class Snake : Figure
     {
+        // В 14 уроке все кардинально ппоменяется без толкового объяснения
+
         Direction direction;
         public Snake(Point tail, int length, Direction _direction)
         {

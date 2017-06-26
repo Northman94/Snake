@@ -8,6 +8,8 @@ namespace Snake
 {
     class FoodCreator
     {
+        // В 14 уроке все кардинально ппоменяется без толкового объяснения
+
         int mapWidth;
         int mapHeight;
         char sym;
