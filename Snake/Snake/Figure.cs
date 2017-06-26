@@ -11,8 +11,8 @@ namespace Snake
         //protected - чтоб ее видели наследники
         protected List<Point> pList;
 
-
-        public void Draw()
+        // Добавляем virtual будет ошибка в Horizontalline вызове
+        public virtual void Draw()
         {
             foreach (Point p in pList)
             {

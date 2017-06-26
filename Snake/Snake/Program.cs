@@ -92,11 +92,14 @@ namespace Snake
             {
                 f.Draw();
             }
+
+            Console.ReadKey();
         }
 
         static void Draw(Figure figure)
         {
             figure.Draw();
         }
+
     }
 }
