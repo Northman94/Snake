@@ -6,40 +6,33 @@ using System.Threading.Tasks;
 
 namespace Snake
 {
-    // В 14 уроке все кардинально ппоменяется без толкового объяснения
-
     class Point
     {
         public int x;
         public int y;
         public char sym;
 
- 
         public Point()
         {
         }
 
-        public Point(int _x, int _y, char _sym)
+        public Point(int x, int y, char sym)
         {
-            x = _x;
-            y = _y;
-            sym = _sym; //это как this x = x;
+            this.x = x;
+            this.y = y;
+            this.sym = sym;
         }
 
-
-        //---------------------------------------
-        //Конструктор для Snake
-        public Point (Point p)
+        public Point(Point p)
         {
             x = p.x;
             y = p.y;
             sym = p.sym;
         }
-        
-        // Метод направления Змейки
+
         public void Move(int offset, Direction direction)
         {
-            if(direction == Direction.RIGHT)
+            if (direction == Direction.RIGHT)
             {
                 x = x + offset;
             }
@@ -47,18 +40,17 @@ namespace Snake
             {
                 x = x - offset;
             }
-            else if (direction == Direction.DOWN)
-            {
-                y = y + offset;
-            }
             else if (direction == Direction.UP)
             {
                 y = y - offset;
             }
+            else if (direction == Direction.DOWN)
+            {
+                y = y + offset;
+            }
         }
-        //-----------------------------------------
 
-            public bool IsHit(Point p)
+        public bool IsHit(Point p)
         {
             return p.x == this.x && p.y == this.y;
         }
@@ -75,12 +67,9 @@ namespace Snake
             Draw();
         }
 
-        // Метод чтоб удобнее было в отладчике смотреть
-        // на значение переменной Point
         public override string ToString()
         {
             return x + ", " + y + ", " + sym;
         }
     }
 }
-
