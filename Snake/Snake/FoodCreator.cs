@@ -8,9 +8,7 @@ namespace Snake
 {
     class FoodCreator
     {
-        // В 14 уроке все кардинально ппоменяется без толкового объяснения
-
-        int mapWidth;
+        int mapWidht;
         int mapHeight;
         char sym;
 
@@ -18,15 +16,14 @@ namespace Snake
 
         public FoodCreator(int mapWidth, int mapHeight, char sym)
         {
-         // this относится к переменным выше на уровень(которые для всего класса)
-            this.mapWidth = mapWidth;
+            this.mapWidht = mapWidth;
             this.mapHeight = mapHeight;
             this.sym = sym;
         }
 
         public Point CreateFood()
         {
-            int x = random.Next(2, mapWidth - 2);
+            int x = random.Next(2, mapWidht - 2);
             int y = random.Next(2, mapHeight - 2);
             return new Point(x, y, sym);
         }
