@@ -8,11 +8,23 @@ namespace Snake
 {
     class Figure
     {
+        #region Old
         //protected - чтоб ее видели наследники
-        protected List<Point> pList;
+        //protected List<Point> pList;
 
         // Добавляем virtual будет ошибка в Horizontalline вызове
-        public virtual void Draw()
+        //public virtual void Draw()
+        //{
+        //    foreach (Point p in pList)
+        //    {
+        //        p.Draw();
+        //    }
+        //}
+        #endregion
+
+        protected List<Point> pList;
+
+        public void Draw()
         {
             foreach (Point p in pList)
             {
@@ -20,5 +32,24 @@ namespace Snake
             }
         }
 
+        internal bool IsHit(Figure figure)
+        {
+            foreach (var p in pList)
+            {
+                if (figure.IsHit(p))
+                    return true;
+            }
+            return false;
+        }
+
+        private bool IsHit(Point point)
+        {
+            foreach (var p in pList)
+            {
+                if (p.IsHit(point))
+                    return true;
+            }
+            return false;
+        }
     }
 }
