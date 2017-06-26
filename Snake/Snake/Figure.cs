@@ -8,20 +8,6 @@ namespace Snake
 {
     class Figure
     {
-        #region Old
-        //protected - чтоб ее видели наследники
-        //protected List<Point> pList;
-
-        // Добавляем virtual будет ошибка в Horizontalline вызове
-        //public virtual void Draw()
-        //{
-        //    foreach (Point p in pList)
-        //    {
-        //        p.Draw();
-        //    }
-        //}
-        #endregion
-
         protected List<Point> pList;
 
         public void Draw()
